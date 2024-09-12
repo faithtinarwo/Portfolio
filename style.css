@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: #f0f0f0; 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+}
+
+/* Nav Styles */
+nav {
+    background: transparent; 
+    height: 90px; 
+    width: 100%; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.header-sec{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    z-index: 100;
+}
+nav{
+    background: transparent;
+    height: 90px;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 86px;
+    font-weight: bold;
+
+  }
+  .logo span{
+    color: #808000;
+  }
+  nav ul{
+    float: right;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 5px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #808000;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: #808000;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media screen and (max-width: 952px){
+    .header-sec{
+        padding: 0 40px;
+    }
+    label.logo{
+      font-size: 26px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 858px) {
+    .checkbtn{
+      display: block;
+      font-size: 26px;
+      margin-top: 5px;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2b2b2b;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 10px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #808000;
+    }
+    #check:checked ~ ul{
+      left:0;
+    }
+  }
+  .hero{
+    background-color: #0000004c;
+    background-image: url(faith.png);
+    background-position: calc(100% - 80px) center;
+    background-repeat: no-repeat;
+    background-size:400px;
+    background-blend-mode: color;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+  }
+  .hero-content{
+    width: 600px;
+  }
+  .hero-content h1{
+    color: #ebebeb;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    padding-top: 80px;
+  }
+  .hero-content h2{
+    color: #808000;
+    font-size: 34px;
+    font-weight: 600;
+  }
+  .hero-content p{
+    font-size: 16px;
+    color: #ebebeb;
+    line-height: 26px;
+    margin: 20px 0 40px;
+  }
+  .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: 50px;
+  }
+  .btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #808000;
+    border: 2px solid #808000;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #ebebeb;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .btn-box a:hover{
+    color: #fff;
+  }
+  .btn-box a:nth-child(2){
+    background: transparent;
+    color: #808000;
+  }
+  .btn-box a:nth-child(2):hover{
+    color: #ebebeb;
+  }
+  .btn-box a:nth-child(2)::before{
+    background: #808000;
+  }
+  .btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    border-radius: 8px;
+    transition: 0.5s;
+  }
+  .btn-box a:hover::before{
+    width: 100%;
+  }
+  .social-icon{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+.social-icon a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #808000;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #808000;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.social-icon a:hover{
+    color: #ebebeb;
+}
+.social-icon a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #808000;
+    z-index: -1;
+    transition: 0.5s;
+}
+.social-icon a:hover:before{
+width:100%;
+}
+
+/* Case Studies Styles */
+.case-studies {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    padding: 100px;
+}
+
+.case-study {
+    margin: 80px 0;
+    margin-right: 100px;
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.case-study img {
+    width: 100%;
+    height: auto;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 250px; 
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-bottom: 2px solid #ddd; 
+}
+
+.case-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 100px;
+    font-size: 18px;
+    border-radius: 5px; 
+}
+
+.description {
+    padding: 20px;
+}
+
+.description p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Resume Styles */
+.resume-header {
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.skills-content {
+    padding: 20px;
+}
+
+/* Contact Styles */
+.contact {
+    padding: 120px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-bottom: 5px;
+}
+
+.contact input, .contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #808000; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #686807; 
+}
+
+/* Responsive Code */
+@media  screen and (max-width: 952px) {
+  .hero{
+    padding: 0 40px;
+  }
+  .hero h1{
+    padding: 60px 0 0 0;
+  }
+
+  .header-sec {
+    background-color: #808000; 
+    color: white;
+}
+
+/* About Page Styles */
+.about-section {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 100px 60px; /* Padding for top and sides */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 120px; /* Space from the navbar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-content {
+  max-width: 400px; /* Limit width of content */
+  text-align: center; /* Center text within content */
+  color: #808000; /* Text color */
+  padding: 20px; /* Padding around content */
+}
+
+.about-content h1 {
+  color: #808000; 
+  margin-bottom: 30px; 
+  font-size: 36px; 
+}
+
+.about-content h2 {
+  color: #808000; 
+  margin: 20px 0; 
+  font-size: 28px; 
+}
+
+.about-content p {
+  color: #333; 
+  margin: 60px 0; 
+  font-size: 16px; 
+  line-height: 1.6; /
+}
+
+
+}
